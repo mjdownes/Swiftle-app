@@ -16,7 +16,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 // Creates a provider - this wraps the main entry point for the app so that all the children of the app can access the state and the setState
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-    const [theme, setThemeState] = useState<Theme>('SpeakNow'); // Default should be colourful - default is always the LD accessible option
+    const [theme, setThemeState] = useState<Theme>('Debut'); // Default should be colourful - default is always the LD accessible option
 
     // Set Theme when there is a new state 
     const setTheme = (newTheme: Theme) => {

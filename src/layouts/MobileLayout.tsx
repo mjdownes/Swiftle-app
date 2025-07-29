@@ -32,7 +32,7 @@ const Layout = ({ children, allowBack, className }: LayoutProps) => {
       }}>
 
       {/* Header with the back button  */}
-      {allowBack && (<Header className="text-black text-3xl font-bold text-center z-10 h-[25%] "
+      {allowBack && (<Header className=" z-10 h-[10%] "
         style={{
           backgroundColor: currentTheme.background,
           color: currentTheme.secondary

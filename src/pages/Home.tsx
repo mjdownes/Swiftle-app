@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { themes } from '../assets/styles/themes.js';
 import Button from '../components/Button.tsx';
 import { useTheme } from '../contexts/ThemeContext.tsx';
@@ -6,16 +7,17 @@ import { ChartColumnBig, UserRound } from 'lucide-react';
 
 
 function Home() {
-
+    const navigate = useNavigate();
     const { theme } = useTheme();
     const currentTheme = themes[theme];
+
     return (
         <Layout allowBack={false} className="p-10">
 
             <div className='flex flex-col gap-y-10'>
                 <div className="flex flex-row gap-x-3  justify-end px-15">
                     <ChartColumnBig size={30} className='text-center mb-5' style={{ color: currentTheme.secondary }} />
-                    <UserRound size={30} className='text-center mb-5' style={{ color: currentTheme.secondary }} />
+                    <UserRound size={30} className='text-center mb-5' style={{ color: currentTheme.secondary }} onClick={() => navigate("/profile")} />
                 </div>
 
                 <div className='flex flex-col items-center justify-center w-full '>
