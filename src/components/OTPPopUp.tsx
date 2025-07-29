@@ -16,17 +16,25 @@ const OTPPopUp = ({ onClose, onSuccess, email }: { onClose: () => void, onSucces
 
     return ReactDOM.createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" >
-            <div className="rounded-lg border shadow-lg w-11/12 p-5 space-y-6 flex flex-col items-center" style={{ backgroundColor: currentTheme.background, borderColor: currentTheme.secondary }}>
-                <div className="w-full">
-                    <X className="float-left w-[10%]" onClick={onClose} />
-                    <h1 className="flex-1 text-2xl text-center font-extrabold" style={{ color: currentTheme.secondary }}> OTP Code: </h1>
-                </div>
+            <div className="relative rounded-lg border shadow-lg w-11/12 p-5 space-y-6" style={{ backgroundColor: currentTheme.background, borderColor: currentTheme.secondary }}>
 
-                <form className="space-y-6 flex flex-row space-x-1">
-                    <FormEntry type='string' value={otp} onChange={(e) => setOtp(e.target.value)} />
+                <button className="absolute top-4 left-4" onClick={onClose}>
+                    <X size={24} />
+                </button>
+                <h1 className='font-[quicksand] text-center font-extrabold text-2xl' style={{ color: currentTheme.secondary }}> OTP Code: </h1>
+
+
+                <form className="w-full flex justify-center ">
+                    <div className="w-[70%]">
+                        <FormEntry type='string' value={otp} onChange={(e) => setOtp(e.target.value)} />
+
+                    </div>
                 </form>
 
-                <Button onClick={() => { }} className={""} style={{ background: currentTheme.background, color: currentTheme.secondary }} > Confirm </Button>
+                <div className="flex  justify-center w-full">
+                    <Button onClick={() => onSuccess()} className={"w-[30%] text-2xl text-center"} style={{ background: currentTheme.background, color: currentTheme.secondary }} > Confirm </Button>
+
+                </div>
 
             </div>
         </div>

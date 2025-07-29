@@ -54,11 +54,11 @@ function Auth() {
                         </form>
                     </div>
 
-                    <Button onClick={() => { nav('/home') }} className="flex items-center justify-center text-2xl w-[60%]" style={undefined} > {selected} </Button>
+                    <Button onClick={() => setOpen(true)} className="flex items-center justify-center text-2xl w-[60%]" style={undefined} > {selected} </Button>
 
-                    {/*{open && (
-                        < OTPPopUp onClose={() => setOpen(!open)} email={email} onSuccess={() => { }} />
-                    )}*/}
+                    {open && (
+                        < OTPPopUp onClose={() => setOpen(!open)} email={email} onSuccess={() => nav('/home')} />
+                    )}
 
                 </div>
             </Layout >
