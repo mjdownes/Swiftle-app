@@ -2,8 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 // HANDLES THE COLOUR SCHEME FOR THE WHOLE APP 
 
-
-type Theme = 'Debut' | 'Fearless' | 'SpeakNow' | 'Red' | 'Nineteen' | 'Reputation' | 'Lover' | 'Folklore' | 'Evermore' | 'Midnights' | 'TTPD';  // Specifies the options
+export type Theme = 'Debut' | 'Fearless' | 'SpeakNow' | 'Red' | 'Nineteen' | 'Reputation' | 'Lover' | 'Folklore' | 'Evermore' | 'Midnights' | 'TTPD';  // Specifies the options
 
 // Defines the type for the context 
 interface ThemeContextType {

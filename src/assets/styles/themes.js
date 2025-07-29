@@ -8,7 +8,7 @@ export const themes = {
     Fearless: {
         name: 'Fearless',
         background: '#FDDAA6',
-        primary: '#FFEDD3',
+        primary: '#FFE2B7',
         secondary: '#1E151A',
     },
     SpeakNow: {
