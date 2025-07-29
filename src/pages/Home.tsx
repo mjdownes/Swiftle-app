@@ -15,7 +15,7 @@ function Home() {
         <Layout allowBack={false} className="p-10">
 
             <div className='flex flex-col gap-y-10'>
-                <div className="flex flex-row gap-x-3  justify-end px-15">
+                <div className="flex flex-row gap-x-3 justify-end px-15">
                     <ChartColumnBig size={30} className='text-center mb-5' style={{ color: currentTheme.secondary }} />
                     <UserRound size={30} className='text-center mb-5' style={{ color: currentTheme.secondary }} onClick={() => navigate("/profile")} />
                 </div>
@@ -31,7 +31,7 @@ function Home() {
                 <Button onClick={undefined} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
                     Play Todays Game
                 </Button>
-                <Button onClick={undefined} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary }}>
+                <Button onClick={undefined} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
                     Play Archived Games
                 </Button>
             </div>
