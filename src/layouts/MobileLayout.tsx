@@ -39,7 +39,7 @@ const Layout = ({ children, allowBack, className }: LayoutProps) => {
         }} />)}
 
       {/* main area where all the children goes */}
-      <main className="flex-1 overflow-y-auto mx-5">
+      <main className="flex flex-col flex-1 overflow-y-auto">
         {children}
       </main>
 
