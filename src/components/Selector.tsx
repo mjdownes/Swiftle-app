@@ -36,7 +36,7 @@ const Selector = ({ options, def, className, onChange }: SelectorProps) => {
                                 {/* Map all of the options passed in - in separate buttons */}
                                 {options.map((range: string) => (
                                     <button key={range} onClick={() => { handleChange(range) }}
-                                        className={twMerge('flex-1 py-2 px-2 my-2 mx-1 rounded-xl shadow-md border font-[quicksand]', selected === range ? "inset-shadow-sm/50" : "")} style={{ backgroundColor: selected === range ? currentTheme.background : currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
+                                        className={twMerge('flex-1 py-2 px-2 my-2 mx-3 rounded-xl shadow-md border font-[quicksand] text-2xl', selected === range ? "inset-shadow-sm/50" : "")} style={{ backgroundColor: selected === range ? currentTheme.background : currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
                                         {range.charAt(0).toUpperCase() + range.slice(1)} {/* Ensure the first letter is capital and the rest is lowercase */}
                                     </button>
                                 ))}

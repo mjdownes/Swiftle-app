@@ -25,7 +25,7 @@ function Auth() {
         <>
             <Layout allowBack={false} className="p-10">
                 <div>
-                    <h1 className="text-5xl mb-10 mt-10 text-center font-extrabold font-pistilli  " style={{ color: currentTheme.secondary }}> WELCOME  </h1>
+                    <h1 className="text-5xl mb-10 mt-10 text-center font-extrabold font-pistilli  " style={{ color: currentTheme.secondary }}> SWIFTLE  </h1>
                 </div>
 
                 <Selector options={["Register", "Login"]} def={"Register"} onChange={(newSelected) => { setSelected(newSelected) }} className="w-[90%] mx-auto" />
@@ -47,7 +47,7 @@ function Auth() {
                                     <FormEntry type='password' label="Password:" value={password} onChange={(e) => setPassword(e.target.value)} />
 
                                     <div className="flex items-center justify-center">
-                                        <Button className="text-center underline bg-transparent text-md shadow-none border-none" onClick={() => { }} style={{ color: currentTheme.secondary }}> Forgot Password? </Button>
+                                        <Button className="text-center underline bg-transparent text-md shadow-none border-none" onClick={() => nav('/forgotPassword')} style={{ color: currentTheme.secondary }}> Forgot Password? </Button>
                                     </div>
                                 </>
                             )}

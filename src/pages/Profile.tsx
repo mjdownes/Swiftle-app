@@ -12,6 +12,7 @@ function Profile() {
     const { theme } = useTheme();
     const currentTheme = themes[theme];
     const [showPopup, setShowPopup] = useState(false);
+    const nav = useNavigate();
 
     return (
         <Layout allowBack={true} className="p-5">
@@ -39,6 +40,9 @@ function Profile() {
                 </Button>
                 <Button onClick={() => setShowPopup(true)} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary }}>
                     Choose your Colour Scheme
+                </Button>
+                <Button onClick={() => nav('/')} className="flex items-center justify-center text-2xl w-[40%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary }}>
+                    Log Out
                 </Button>
             </div>
 

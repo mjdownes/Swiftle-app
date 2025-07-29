@@ -16,7 +16,7 @@ const FormEntry = ({ type, label, value, onChange }: FormEntryProps) => {
 
     return (
         <div>
-            <label className="block font-medium mb-1" style={{ color: currentTheme.secondary }}>{label}</label>
+            <label className="block text-xl font-medium mb-1 font-[quicksand]" style={{ color: currentTheme.secondary }}>{label}</label>
             <input
                 type={type}
                 value={value}
