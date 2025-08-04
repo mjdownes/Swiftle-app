@@ -35,12 +35,7 @@ function ForgotPassword() {
                     </form>
                 </div>
 
-                <Button onClick={() => setOpen(true)} className="flex items-center justify-center text-2xl w-[60%]" style={undefined} > Send me a code </Button>
-
-                {open && (
-                    <OTPPopUp onClose={() => setOpen(!open)} onSuccess={() => { nav('/home') }} email={email} />
-                )}
-
+                <Button onClick={() => nav('/resetPassword')} className="flex items-center justify-center text-2xl w-[60%]" style={undefined} > Send me a code </Button>
             </div>
         </Layout >
     )

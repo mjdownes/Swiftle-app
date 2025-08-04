@@ -19,8 +19,9 @@ function ChangePassword() {
     return (
         <Layout allowBack={true} className="p-5">
 
-            <div className='flex flex-col items-center justify-center w-full gap-y-5 mb-10 '>
-                <h1 className='font-[quicksand] text-5xl mb-20 font-bold' style={{ color: currentTheme.secondary }}> Change Password </h1>
+            <div className='flex flex-col items-center justify-center w-full gap-y-5 mb-5 '>
+                <h1 className='font-pistilli text-5xl mb-5' style={{ color: currentTheme.secondary }}> SWIFTLE </h1>
+                <h1 className="text-2xl font-[quicksand] text-center font-extrabold" style={{ color: currentTheme.secondary }}> Change Password </h1>
             </div>
 
 
