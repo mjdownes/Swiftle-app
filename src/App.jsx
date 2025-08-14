@@ -7,6 +7,7 @@ import Profile from './pages/Profile.tsx'
 import ForgotPassword from './pages/ForgotPassword.tsx'
 import ChangePassword from './pages/ChangePassword.tsx'
 import ResetPassword from './pages/ResetPassword.tsx'
+import GameBoard from './pages/GameBoard.tsx'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/resetPassword" element={<ResetPassword />} />
+      <Route path="/gameBoard" element={<GameBoard />} />
 
 
     </Routes>

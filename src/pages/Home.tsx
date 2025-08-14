@@ -28,7 +28,7 @@ function Home() {
 
             <div className='flex flex-col flex-1 items-center justify-center gap-y-6'>
 
-                <Button onClick={undefined} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
+                <Button onClick={() => navigate('/gameBoard')} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
                     Play Todays Game
                 </Button>
                 <Button onClick={undefined} className="flex items-center justify-center text-2xl w-[80%]" style={{ backgroundColor: currentTheme.primary, color: currentTheme.secondary, borderColor: currentTheme.secondary }}>
