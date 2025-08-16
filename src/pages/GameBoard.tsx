@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { themes } from '../assets/styles/themes.js';
 import { useTheme } from '../contexts/ThemeContext.tsx';
 import Layout from '../layouts/MobileLayout.tsx'
@@ -11,19 +10,16 @@ function GameBoard() {
     const currentTheme = themes[theme];
 
     return (
-        <Layout allowBack={true} className="p-5">
+        <Layout allowBack={true} allowTitle={true} className="p-10">
 
-            <div className='flex flex-col items-center justify-center w-full gap-y-5 mb-5 '>
-                <h1 className='font-pistilli text-3xl md:text-5xl mb-5' style={{ color: currentTheme.secondary }}> SWIFTLE </h1>
+            <div className="mt-5 space-y-10">
+                <SongSearch />
+
+                <div className='flex flex-col items-center justify-center w-full'>
+                    <Guess />
+                </div>
+
             </div>
-
-            <SongSearch onClick={undefined} className={undefined} />
-
-
-            <div className='flex flex-col items-center justify-center w-full mt-10'>
-                <Guess />
-            </div>
-
         </Layout >
     )
 }

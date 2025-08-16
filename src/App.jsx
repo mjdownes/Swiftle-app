@@ -8,6 +8,8 @@ import ForgotPassword from './pages/ForgotPassword.tsx'
 import ChangePassword from './pages/ChangePassword.tsx'
 import ResetPassword from './pages/ResetPassword.tsx'
 import GameBoard from './pages/GameBoard.tsx'
+import { Archive } from 'lucide-react'
+import ArchiveCalendar from './pages/ArchiveCalendar.tsx'
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
       <Route path="/changePassword" element={<ChangePassword />} />
       <Route path="/resetPassword" element={<ResetPassword />} />
       <Route path="/gameBoard" element={<GameBoard />} />
+      <Route path="/archiveCalendar" element={<ArchiveCalendar />} />
 
 
     </Routes>

@@ -8,10 +8,12 @@ import { themes } from "../assets/styles/themes";
 type LayoutProps = {
   children?: ReactNode,
   allowBack?: boolean,
-  className?: string
+  allowTitle?: boolean,
+  className?: string,
+  isHome?: boolean,
 }
 
-const Layout = ({ children, allowBack, className }: LayoutProps) => {
+const Layout = ({ children, allowBack, allowTitle, className, isHome }: LayoutProps) => {
 
   // current Theme 
 
@@ -32,14 +34,14 @@ const Layout = ({ children, allowBack, className }: LayoutProps) => {
       }}>
 
       {/* Header with the back button  */}
-      {allowBack && (<Header className=" z-10 h-[10%] "
+      <Header className="z-10 h-[10%] "
         style={{
           backgroundColor: currentTheme.background,
           color: currentTheme.secondary
-        }} />)}
+        }} allowBack={allowBack} allowTitle={allowTitle} isHome={isHome} />
 
       {/* main area where all the children goes */}
-      <main className="flex flex-col flex-1 overflow-y-auto">
+      < main className="flex flex-col flex-1 overflow-y-auto">
         {children}
       </main>
 

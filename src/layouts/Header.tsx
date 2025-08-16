@@ -1,10 +1,10 @@
 import { twMerge } from "tailwind-merge";
 import { useNavigate } from "react-router-dom";
-import { ChevronLeft } from "lucide-react"
+import { ChartColumnBig, ChevronLeft, UserRound } from "lucide-react"
 import { useTheme } from "../contexts/ThemeContext";
 import { themes } from "../assets/styles/themes";
 
-const Header = ({ className, style }) => {
+const Header = ({ className, style, allowBack, allowTitle, isHome }) => {
 
     const navigate = useNavigate()
     const { theme } = useTheme();
@@ -12,14 +12,34 @@ const Header = ({ className, style }) => {
 
     return (
 
-        <div className={twMerge(className)} style={style} onClick={() => navigate(-1)}>
-            {/* Create the back button in the top left corner which navigates back a page when clicked */}
-            <div className="flex float-left" onClick={() => navigate(-1)}>
-                <ChevronLeft className=" w-[50%] h-auto ml-5" style={{ color: currentTheme.secondary }} />
-                <p className="text-md font-[quicksand] font-bold" style={{ color: currentTheme.secondary }}> Back </p>
+        <div className={twMerge("flex flex-row justify-between items-center", className)} style={style}>
+            {/* Left slot: Back button */}
+            <div className="flex items-top justify-start w-24 h-full ml-4">
+                {allowBack ? (
+                    <div className="flex items-center" onClick={() => navigate(-1)}>
+                        <ChevronLeft size={30} style={{ color: currentTheme.secondary }} />
+                        <p className="text-lg font-[quicksand] font-bold" style={{ color: currentTheme.secondary }}>Back</p>
+                    </div>
+                ) : null}
             </div>
 
-        </div >
+            {/* Center slot: Title */}
+            <div className="flex items-top justify-center flex-1">
+                {allowTitle ? (
+                    <h1 className='font-pistilli text-3xl md:text-5xl' style={{ color: currentTheme.secondary }} onClick={() => navigate('/home')}>SWIFTLE</h1>
+                ) : null}
+            </div>
+
+            {/* Right slot: Icons */}
+            <div className="flex items-top justify-end w-24 space-x-4 h-full mr-4">
+                {isHome && (
+                    <>
+                        <ChartColumnBig size={30} style={{ color: currentTheme.secondary }} />
+                        <UserRound size={30} style={{ color: currentTheme.secondary }} onClick={() => navigate("/profile")} />
+                    </>
+                )}
+            </div>
+        </div>
 
 
     );

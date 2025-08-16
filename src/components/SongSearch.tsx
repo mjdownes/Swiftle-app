@@ -4,7 +4,12 @@ import { Search } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { themes } from "../assets/styles/themes";
 
-const SongSearch = ({ onClick, className }) => {
+type SongSearchProps = {
+    className?: string,
+    onClick?: (value: any) => void
+}
+
+const SongSearch = ({ className, onClick }: SongSearchProps) => {
 
     const [song, setSong] = useState("");
     const { theme } = useTheme()

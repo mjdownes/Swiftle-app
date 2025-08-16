@@ -23,10 +23,7 @@ function Auth() {
     const currentTheme = themes[theme]
     return (
         <>
-            <Layout allowBack={false} className="p-10">
-                <div>
-                    <h1 className="text-5xl mb-10 mt-10 text-center font-extrabold font-pistilli  " style={{ color: currentTheme.secondary }}> SWIFTLE  </h1>
-                </div>
+            <Layout allowBack={false} allowTitle={true} className="p-10">
 
                 <Selector options={["Register", "Login"]} def={"Register"} onChange={(newSelected) => { setSelected(newSelected) }} className="w-[90%] mx-auto" />
 

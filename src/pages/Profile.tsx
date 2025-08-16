@@ -15,11 +15,7 @@ function Profile() {
     const nav = useNavigate();
 
     return (
-        <Layout allowBack={true} className="p-5">
-
-            <div className='flex flex-col items-center justify-center w-full '>
-                <h1 className='font-pistilli text-5xl' style={{ color: currentTheme.secondary }}> SWIFTLE </h1>
-            </div>
+        <Layout allowBack={true} allowTitle={true} className="p-10">
 
             <div className='flex flex-col flex-1 items-center justify-center gap-y-6 w-full'>
                 <div className='gap-y-3'>

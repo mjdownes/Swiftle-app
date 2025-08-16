@@ -19,10 +19,9 @@ function ForgotPassword() {
 
 
     return (
-        <Layout allowBack={true} className="p-5">
+        <Layout allowBack={true} allowTitle={true} className="p-10">
 
             <div className='flex flex-col items-center justify-center w-full gap-y-5 mb-10 '>
-                <h1 className='font-pistilli text-5xl mb-20' style={{ color: currentTheme.secondary }}> SWIFTLE </h1>
                 <h1 className="text-2xl font-[quicksand] text-center font-extrabold" style={{ color: currentTheme.secondary }}> Forgot Password? </h1>
                 <p className="text-xl font-[quicksand] text-center font-regular" style={{ color: currentTheme.secondary }}> Enter your email and we will send you a OTP code to reset your password. </p>
             </div>
